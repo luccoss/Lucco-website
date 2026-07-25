@@ -1,1 +1,508 @@
-ik ben bij het tekstvak
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>LUCCO — Curated for a Better Everyday</title>
+
+  <meta
+    name="description"
+    content="Ontdek zorgvuldig geselecteerde lifestyle-, wellness-, home- en techproducten bij LUCCO."
+  >
+
+  <meta name="theme-color" content="#f7f3ed">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="announcement">
+    Curated lifestyle finds for a smarter, calmer everyday
+  </div>
+
+  <header class="header">
+    <div class="container navigation">
+
+      <a class="logo" href="#top">LUCCO</a>
+
+      <nav class="desktop-menu" aria-label="Hoofdnavigatie">
+        <a href="#categories">Categorieën</a>
+        <a href="#featured">Editor's Picks</a>
+        <a href="#journal">The Lucco Edit</a>
+        <a href="#newsletter">Nieuwsbrief</a>
+      </nav>
+
+      <a class="header-button desktop-button" href="#featured">
+        Ontdek onze finds
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Menu openen"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-top">
+      <a class="logo" href="#top">LUCCO</a>
+
+      <button
+        class="mobile-menu-close"
+        id="closeMenu"
+        type="button"
+        aria-label="Menu sluiten"
+      >
+        ×
+      </button>
+    </div>
+
+    <nav class="mobile-menu-links">
+      <a href="#categories">Categorieën</a>
+      <a href="#featured">Editor's Picks</a>
+      <a href="#journal">The Lucco Edit</a>
+      <a href="#newsletter">Nieuwsbrief</a>
+    </nav>
+  </div>
+
+  <main id="top">
+
+    <section class="hero">
+
+      <div class="hero-content">
+        <div class="hero-copy reveal">
+
+          <span class="eyebrow">
+            Curated for a better everyday
+          </span>
+
+          <h1>
+            Beautiful finds.<br>
+            Better living.
+          </h1>
+
+          <p class="hero-description">
+            Ontdek zorgvuldig geselecteerde lifestyle-, wellness-,
+            home- en techproducten die je dagelijks leven slimmer,
+            rustiger en stijlvoller maken.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-dark" href="#featured">
+              Ontdek onze finds
+            </a>
+
+            <a class="button button-light" href="#journal">
+              Lees The Lucco Edit
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <span>✓ Zorgvuldig geselecteerd</span>
+            <span>✓ Onafhankelijke inspiratie</span>
+            <span>✓ Wekelijks nieuwe finds</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85"
+          alt="Stijlvol minimalistisch interieur"
+        >
+      </div>
+
+    </section>
+
+    <section class="intro section">
+      <div class="container narrow reveal">
+
+        <span class="eyebrow">The LUCCO philosophy</span>
+
+        <h2>
+          Minder zoeken.<br>
+          Beter kiezen.
+        </h2>
+
+        <p class="large-text">
+          LUCCO verzamelt producten en ideeën die echt iets toevoegen
+          aan je dagelijks leven. Geen eindeloze lijsten, maar een rustige
+          selectie van mooie en praktische ontdekkingen.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Shop by lifestyle</span>
+            <h2>Vind wat bij jou past.</h2>
+          </div>
+
+          <p>
+            Ontdek onze favoriete selecties voor home, wellness,
+            technologie en dagelijks comfort.
+          </p>
+        </div>
+
+        <div class="category-grid">
+
+          <a class="category-card reveal" href="#featured">
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+              alt="Modern interieur"
+            >
+            <div class="category-overlay">
+              <span>01</span>
+              <h3>Home & Living</h3>
+              <p>Rustige details voor een mooi thuis.</p>
+            </div>
+          </a>
+
+          <a class="category-card reveal" href="#featured">
+            <img
+              src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=85"
+              alt="Wellnessproducten"
+            >
+            <div class="category-overlay">
+              <span>02</span>
+              <h3>Wellness</h3>
+              <p>Favorieten voor verzorging en ontspanning.</p>
+            </div>
+          </a>
+
+          <a class="category-card reveal" href="#featured">
+            <img
+              src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85"
+              alt="Laptop en technologie"
+            >
+            <div class="category-overlay">
+              <span>03</span>
+              <h3>Smart Tech</h3>
+              <p>Handige technologie voor iedere dag.</p>
+            </div>
+          </a>
+
+          <a class="category-card reveal" href="#featured">
+            <img
+              src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=85"
+              alt="Reizen en lifestyle"
+            >
+            <div class="category-overlay">
+              <span>04</span>
+              <h3>Travel & Lifestyle</h3>
+              <p>Slimme essentials voor onderweg.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section featured-section" id="featured">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Editor's Picks</span>
+            <h2>De favorieten van dit moment.</h2>
+          </div>
+
+          <p>
+            Een selectie van stijlvolle en handige producten
+            die onze aandacht verdienen.
+          </p>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product-card reveal">
+            <a href="#" class="product-image" target="_blank" rel="sponsored noopener">
+              <span class="product-label">LUCCO PICK</span>
+              <img
+                src="https://images.unsplash.com/photo-1602874801006-e26b88c7e28d?auto=format&fit=crop&w=900&q=85"
+                alt="Minimalistische geurkaars"
+              >
+            </a>
+
+            <div class="product-content">
+              <span class="product-category">Home</span>
+              <h3>Minimalistische geurkaars</h3>
+              <p>
+                Een stijlvolle toevoeging aan je avondroutine
+                met een warme, rustige uitstraling.
+              </p>
+              <a class="product-link" href="#" target="_blank" rel="sponsored noopener">
+                Shop bij partner →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <a href="#" class="product-image" target="_blank" rel="sponsored noopener">
+              <span class="product-label">TRENDING</span>
+              <img
+                src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=85"
+                alt="Skincareproducten"
+              >
+            </a>
+
+            <div class="product-content">
+              <span class="product-category">Wellness</span>
+              <h3>Daily skincare essentials</h3>
+              <p>
+                Een eenvoudige verzorgingsroutine met een rustige,
+                premium uitstraling.
+              </p>
+              <a class="product-link" href="#" target="_blank" rel="sponsored noopener">
+                Bekijk product →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <a href="#" class="product-image" target="_blank" rel="sponsored noopener">
+              <span class="product-label">SMART FIND</span>
+              <img
+                src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=900&q=85"
+                alt="Opgeruimde werkplek"
+              >
+            </a>
+
+            <div class="product-content">
+              <span class="product-category">Productivity</span>
+              <h3>Smart desk upgrades</h3>
+              <p>
+                Praktische accessoires voor een rustigere,
+                georganiseerde werkplek.
+              </p>
+              <a class="product-link" href="#" target="_blank" rel="sponsored noopener">
+                Ontdek de selectie →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <a href="#" class="product-image" target="_blank" rel="sponsored noopener">
+              <span class="product-label">EDITOR'S CHOICE</span>
+              <img
+                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85"
+                alt="Luxe woonaccessoires"
+              >
+            </a>
+
+            <div class="product-content">
+              <span class="product-category">Interior</span>
+              <h3>Calm home accents</h3>
+              <p>
+                Kleine woonaccessoires die warmte en rust
+                aan een ruimte toevoegen.
+              </p>
+              <a class="product-link" href="#" target="_blank" rel="sponsored noopener">
+                Bekijk onze finds →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-section">
+      <div class="container editorial-grid">
+
+        <div class="editorial-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85"
+            alt="Rustig en modern interieur"
+          >
+        </div>
+
+        <div class="editorial-copy reveal">
+          <span class="eyebrow">Selected with intention</span>
+
+          <h2>
+            Producten die mooi zijn én iets toevoegen.
+          </h2>
+
+          <p>
+            LUCCO kiest niet alleen op uiterlijk. Onze selecties
+            combineren stijl, gebruiksgemak en dagelijkse waarde.
+            Zo ontdek je minder producten, maar betere keuzes.
+          </p>
+
+          <a class="text-link" href="#journal">
+            Ontdek onze inspiratie →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section journal-section" id="journal">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">The Lucco Edit</span>
+            <h2>Inspiratie voor elke dag.</h2>
+          </div>
+
+          <p>
+            Verhalen, gidsen en selecties over home,
+            wellness, travel en smart living.
+          </p>
+        </div>
+
+        <div class="article-grid">
+
+          <article class="article-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=1000&q=85"
+              alt="Rustige woonkamer"
+            >
+            <div class="article-content">
+              <span>HOME</span>
+              <h3>7 kleine aanpassingen voor meer rust in huis</h3>
+              <a href="#">Lees het artikel →</a>
+            </div>
+          </article>
+
+          <article class="article-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1000&q=85"
+              alt="Ontspanning en wellness"
+            >
+            <div class="article-content">
+              <span>WELLNESS</span>
+              <h3>Een eenvoudige ochtendroutine die vol te houden is</h3>
+              <a href="#">Lees het artikel →</a>
+            </div>
+          </article>
+
+          <article class="article-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=85"
+              alt="Reisbestemming in de natuur"
+            >
+            <div class="article-content">
+              <span>TRAVEL</span>
+              <h3>De handige reisproducten die weinig ruimte innemen</h3>
+              <a href="#">Lees het artikel →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter section" id="newsletter">
+      <div class="container newsletter-inner reveal">
+
+        <span class="eyebrow light-eyebrow">The Weekly Edit</span>
+
+        <h2>
+          De mooiste finds,<br>
+          rechtstreeks in je inbox.
+        </h2>
+
+        <p>
+          Ontvang wekelijks nieuwe productvondsten,
+          lifestyle-inspiratie en exclusieve selecties.
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <label class="sr-only" for="email">
+            E-mailadres
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Jouw e-mailadres"
+            required
+          >
+
+          <button type="submit">
+            Schrijf me in
+          </button>
+        </form>
+
+        <p class="form-message" id="formMessage"></p>
+
+        <small>
+          Geen spam. Alleen zorgvuldig geselecteerde inspiratie.
+        </small>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <a class="logo footer-logo" href="#top">LUCCO</a>
+        <p>
+          Curated finds for a smarter, calmer
+          and more stylish everyday.
+        </p>
+      </div>
+
+      <div>
+        <h4>Ontdek</h4>
+        <a href="#categories">Categorieën</a>
+        <a href="#featured">Editor's Picks</a>
+        <a href="#journal">The Lucco Edit</a>
+      </div>
+
+      <div>
+        <h4>LUCCO</h4>
+        <a href="#">Over ons</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+
+      <div>
+        <h4>Volg ons</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">TikTok</a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="currentYear"></span> LUCCO. Alle rechten voorbehouden.</p>
+
+      <p>
+        Affiliate disclosure: LUCCO kan commissie ontvangen
+        wanneer je via een partnerlink iets koopt.
+        Voor jou verandert de prijs niet.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
