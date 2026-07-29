@@ -42,14 +42,14 @@
       <a class="logo" href="#top">LUCCO</a>
 
       <nav class="desktop-menu" aria-label="Hoofdnavigatie">
+            <a href="#shop">Shop</a>
         <a href="#categories">Categorieën</a>
         <a href="#featured">Editor's Picks</a>
         <a href="#journal">The Lucco Edit</a>
         <a href="#newsletter">Nieuwsbrief</a>
       </nav>
-
-      <a class="header-button desktop-button" href="#featured">
-        Ontdek onze finds
+<a class="header-button desktop-button" href="#shop">
+  
       </a>
 
       <button
@@ -82,6 +82,7 @@
     </div>
 
     <nav class="mobile-menu-links">
+         <a href="#shop">Shop</a>
       <a href="#categories">Categorieën</a>
       <a href="#featured">Editor's Picks</a>
       <a href="#journal">The Lucco Edit</a>
@@ -137,7 +138,106 @@
         >
       </div>
 
-    </section>
+  <section class="section shop-section" id="shop">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div>
+        <span class="eyebrow">The LUCCO Shop</span>
+        <h2>Onze zorgvuldig geselecteerde finds.</h2>
+      </div>
+
+      <p>
+        Ontdek producten voor home, wellness, tech, travel,
+        fashion en sport.
+      </p>
+    </div>
+
+    <div class="shop-toolbar">
+
+      <label class="sr-only" for="shopSearch">
+        Zoek een product
+      </label>
+
+      <input
+        class="shop-search"
+        id="shopSearch"
+        type="search"
+        placeholder="Zoek bijvoorbeeld Dyson, Rituals of travel..."
+        autocomplete="off"
+      >
+
+      <div class="shop-filters" aria-label="Productcategorieën">
+
+        <button
+          class="filter active"
+          type="button"
+          data-filter="all"
+        >
+          Alles
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="home"
+        >
+          Home
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="wellness"
+        >
+          Wellness
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="tech"
+        >
+          Tech
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="travel"
+        >
+          Travel
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="fashion"
+        >
+          Fashion
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="sport"
+        >
+          Sport
+        </button>
+
+      </div>
+    </div>
+
+    <div class="product-grid" id="shopGrid"></div>
+
+    <p class="affiliate-note">
+      Sommige links zijn affiliatelinks. LUCCO kan een commissie
+      ontvangen wanneer je via deze links iets koopt. Voor jou blijft
+      de prijs hetzelfde.
+    </p>
+
+  </div>
+</section>
 
     <section class="intro section">
       <div class="container narrow reveal">
@@ -437,7 +537,71 @@
         <p>
           Ontvang wekelijks nieuwe productvondsten,
           lifestyle-inspiratie en exclusieve selecties.
-        </p>
+        </p><section class="section info-section" id="about">
+  <div class="container narrow reveal">
+
+    <span class="eyebrow">Over LUCCO</span>
+
+    <h2>Betere producten, zorgvuldig geselecteerd.</h2>
+
+    <p class="large-text">
+      LUCCO is een lifestyleplatform met zorgvuldig geselecteerde
+      producten voor home, wellness, technologie, reizen, fashion
+      en sport. We verzamelen praktische en stijlvolle vondsten die
+      je dagelijks leven slimmer, rustiger en aangenamer kunnen maken.
+    </p>
+
+    <p>
+      We verkopen de producten niet zelf. Via onze website word je
+      doorgestuurd naar geselecteerde webshops en partners waar je
+      de actuele prijs en beschikbaarheid kunt bekijken.
+    </p>
+
+    <a
+      class="button button-dark"
+      href="mailto:Lucalowieaufderhaar@icloud.com"
+    >
+      Neem contact op
+    </a>
+
+  </div>
+</section>
+
+<section class="section info-section" id="privacy">
+  <div class="container narrow reveal">
+
+    <span class="eyebrow">Privacy & transparantie</span>
+
+    <h2>Hoe LUCCO met links en gegevens omgaat.</h2>
+
+    <p>
+      LUCCO gebruikt affiliatelinks. Wanneer je via een link op onze
+      website een aankoop doet, kunnen wij een kleine commissie ontvangen.
+      Voor jou wordt het product hierdoor niet duurder.
+    </p>
+
+    <p>
+      Voor het omzetten en meten van affiliatelinks kan LUCCO gebruikmaken
+      van LinkPizza en aangesloten partnernetwerken. Deze diensten kunnen
+      cookies of vergelijkbare technieken gebruiken om vast te stellen
+      of een aankoop via LUCCO tot stand kwam.
+    </p>
+
+    <p>
+      Wanneer je ons per e-mail benadert, gebruiken we je gegevens alleen
+      om je bericht te beantwoorden. We verkopen je persoonlijke gegevens
+      niet aan andere partijen.
+    </p>
+
+    <p>
+      Voor vragen over privacy kun je mailen naar
+      <a href="mailto:Lucalowieaufderhaar@icloud.com">
+        Lucalowieaufderhaar@icloud.com
+      </a>.
+    </p>
+
+  </div>
+</section>
 
         <form class="newsletter-form" id="newsletterForm">
           <label class="sr-only" for="email">
@@ -486,11 +650,35 @@
         <a href="#journal">The Lucco Edit</a>
       </div>
 
-      <div>
-        <h4>LUCCO</h4>
-        <a href="#">Over ons</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy</a>
+<div>
+  <h4>LUCCO</h4>
+  <a href="#about">Over ons</a>
+
+  <a href="mailto:Lucalowieaufderhaar@icloud.com">
+    Contact
+  </a>
+
+  <a href="#privacy">Privacy</a>
+</div>
+
+<div>
+  <h4>Volg ons</h4>
+
+  <a
+    href="https://www.instagram.com/luca_aufderhaar?igsh=MXFndmRxZXhncnQxaw%3D%3D&utm_source=qr"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@lucaaufderhaar?_r=1&_t=ZG-98QMJRjJoun"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    TikTok
+  </a>
       </div>
 
       <div>
