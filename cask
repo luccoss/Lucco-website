@@ -1,0 +1,4 @@
+HOMEBREW_NO_INSTALL_FROM_API=1 brew install --cask CASK
+brew uninstall --cask CASK
+brew audit --new --cask CASK
+brew style --fix --cask CASK
