@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adflow — Ads die verkopen</title>
+  <meta name="description" content="Adflow helpt bedrijven groeien met converterende advertenties voor Google, Meta en TikTok." />
+  <style>
+    :root{
+      --bg:#08090d;
+      --card:#11131a;
+      --soft:#171a22;
+      --text:#f5f7fb;
+      --muted:#a7adbb;
+      --line:#242834;
+      --accent:#7c5cff;
+      --accent2:#35d3ff;
+      --success:#56e39f;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(124,92,255,.18), transparent 34%),
+        radial-gradient(circle at 90% 10%, rgba(53,211,255,.12), transparent 26%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(92%,var(--max));margin:auto}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(16px);
+      background:rgba(8,9,13,.72);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:900;letter-spacing:-.04em;font-size:1.45rem}
+    .brand span{color:var(--accent2)}
+    .links{display:flex;gap:26px;color:#c7ccda;font-size:.95rem}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 20px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#5d8dff);
+      color:white;font-weight:800;border:0;cursor:pointer;
+      box-shadow:0 12px 34px rgba(124,92,255,.28);
+    }
+    .btn.ghost{
+      background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--text)
+    }
+    .hero{padding:105px 0 72px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+    .eyebrow{
+      display:inline-block;padding:7px 11px;border-radius:999px;
+      border:1px solid rgba(124,92,255,.4);background:rgba(124,92,255,.09);
+      color:#cfc3ff;font-weight:750;font-size:.83rem
+    }
+    h1{font-size:clamp(3rem,7vw,6.7rem);line-height:.95;letter-spacing:-.07em;margin:22px 0 24px}
+    .grad{
+      background:linear-gradient(90deg,#fff 10%,#a99cff 50%,#67ddff 95%);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .lead{font-size:1.12rem;color:var(--muted);max-width:640px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .micro{margin-top:18px;color:#7f8798;font-size:.88rem}
+    .dash{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:28px;padding:22px;
+      box-shadow:0 30px 80px rgba(0,0,0,.35)
+    }
+    .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+    .dots{display:flex;gap:7px}.dot{width:9px;height:9px;border-radius:50%;background:#343948}
+    .stat-big{font-size:2.4rem;font-weight:900;letter-spacing:-.05em}
+    .positive{color:var(--success);font-weight:800}
+    .chart{
+      height:180px;border-radius:18px;margin:22px 0;
+      background:
+        linear-gradient(to top, rgba(124,92,255,.17), transparent 75%),
+        url("data:image/svg+xml,%3Csvg width='600' height='220' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 190 C 90 180, 105 150, 150 155 S 235 105, 285 120 S 380 90, 430 75 S 520 28, 590 35' fill='none' stroke='%237c5cff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E") center/cover no-repeat,
+        #0d0f14;
+      border:1px solid #232734
+    }
+    .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .mini{background:#0d0f14;border:1px solid #202431;border-radius:16px;padding:14px}
+    .mini b{display:block;font-size:1.22rem}
+    section{padding:80px 0}
+    .section-title{text-align:center;max-width:760px;margin:0 auto 44px}
+    .section-title h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.05em;margin:0 0 12px}
+    .section-title p{color:var(--muted);margin:0}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:rgba(17,19,26,.78);border:1px solid var(--line);border-radius:22px;padding:26px
+    }
+    .icon{
+      width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+      background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(53,211,255,.14));
+      font-size:1.3rem;margin-bottom:16px
+    }
+    .card h3{margin:0 0 9px;font-size:1.3rem}.card p{color:var(--muted);margin:0}
+    .proof{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px
+    }
+    .proof .card{text-align:center;padding:22px}
+    .proof strong{display:block;font-size:1.8rem}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price-card{position:relative}
+    .featured{border-color:rgba(124,92,255,.7);transform:translateY(-8px)}
+    .badge{
+      position:absolute;right:18px;top:18px;padding:5px 9px;border-radius:999px;
+      background:var(--accent);font-size:.72rem;font-weight:900
+    }
+    .price{font-size:2.7rem;font-weight:900;letter-spacing:-.05em;margin:14px 0 4px}
+    .price span{font-size:.95rem;color:var(--muted);font-weight:600}
+    .list{list-style:none;padding:0;margin:20px 0;color:#dfe3ec}
+    .list li{margin:10px 0}.list li::before{content:"✓";color:var(--success);font-weight:900;margin-right:9px}
+    .cta{
+      border:1px solid rgba(255,255,255,.09);border-radius:30px;padding:50px;
+      background:
+        radial-gradient(circle at 10% 20%,rgba(124,92,255,.23),transparent 35%),
+        radial-gradient(circle at 90% 80%,rgba(53,211,255,.15),transparent 28%),
+        var(--card);
+      display:grid;grid-template-columns:1fr .9fr;gap:35px;align-items:center
+    }
+    form{display:grid;gap:12px}
+    input,textarea,select{
+      width:100%;padding:14px 15px;border-radius:12px;border:1px solid #2a2f3d;
+      background:#0d0f14;color:white;font:inherit;outline:none
+    }
+    textarea{min-height:100px;resize:vertical}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:#7f8798;font-size:.9rem;margin-top:50px}
+    .footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){
+      .hero-grid,.cta{grid-template-columns:1fr}
+      .grid3,.pricing{grid-template-columns:1fr}
+      .proof{grid-template-columns:repeat(2,1fr)}
+      .links{display:none}
+      .hero{padding-top:70px}
+      .featured{transform:none}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap navin">
+    <div class="brand">Ad<span>flow</span></div>
+    <div class="links">
+      <a href="#diensten">Diensten</a>
+      <a href="#resultaten">Resultaten</a>
+      <a href="#prijzen">Prijzen</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="#contact">Gratis analyse</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Google • Meta • TikTok Ads</div>
+      <h1>Ads die <span class="grad">groeien.</span><br>Niet gokken.</h1>
+      <p class="lead">
+        Wij bouwen en optimaliseren advertentiecampagnes die klikken omzetten in klanten.
+        Van creatieve strategie tot schaalbare campagnes en duidelijke rapportages.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#contact">Start met groeien</a>
+        <a class="btn ghost" href="#diensten">Bekijk diensten</a>
+      </div>
+      <div class="micro">Geen lange contracten • Heldere communicatie • Data-gedreven</div>
+    </div>
+
+    <div class="dash">
+      <div class="dash-head">
+        <div><b>Campagne overzicht</b><br><span style="color:#7f8798;font-size:.85rem">Laatste 30 dagen</span></div>
+        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+      <div class="stat-big">€24.860</div>
+      <div class="positive">↑ 38,4% omzetgroei</div>
+      <div class="chart"></div>
+      <div class="mini-grid">
+        <div class="mini"><span style="color:#7f8798">ROAS</span><b>4,8x</b></div>
+        <div class="mini"><span style="color:#7f8798">CPA</span><b>€14,20</b></div>
+        <div class="mini"><span style="color:#7f8798">CTR</span><b>3,9%</b></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="diensten">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Alles wat je ads nodig hebben</h2>
+      <p>Van strategie tot optimalisatie. Eén plek voor advertenties die meetbaar bijdragen aan groei.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="icon">G</div>
+        <h3>Google Ads</h3>
+        <p>Search, Shopping en Performance Max gericht op mensen die al actief naar jouw product zoeken.</p>
+      </div>
+      <div class="card">
+        <div class="icon">M</div>
+        <h3>Meta Ads</h3>
+        <p>Instagram- en Facebook-campagnes met sterke creatives, slimme targeting en retargeting.</p>
+      </div>
+      <div class="card">
+        <div class="icon">T</div>
+        <h3>TikTok Ads</h3>
+        <p>Snelle, native advertenties die aansluiten op TikTok en producten aantrekkelijk presenteren.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✦</div>
+        <h3>Creative Strategy</h3>
+        <p>Hooks, visuals en advertentieteksten ontworpen om aandacht te pakken en conversies te verhogen.</p>
+      </div>
+      <div class="card">
+        <div class="icon">↗</div>
+        <h3>Scaling</h3>
+        <p>Winnaars opschalen op basis van data zonder zomaar budget te verhogen en rendement te verliezen.</p>
+      </div>
+      <div class="card">
+        <div class="icon">◎</div>
+        <h3>Rapportages</h3>
+        <p>Je ziet precies wat er binnenkomt, wat het kost en welke campagnes daadwerkelijk winstgevend zijn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resultaten">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Focus op cijfers die tellen</h2>
+      <p>Geen mooie grafieken zonder betekenis. We sturen op omzet, kosten per klant en rendement.</p>
+    </div>
+    <div class="proof">
+      <div class="card"><strong>4.8x</strong><span style="color:#8e95a5">voorbeeld ROAS</span></div>
+      <div class="card"><strong>+38%</strong><span style="color:#8e95a5">voorbeeld groei</span></div>
+      <div class="card"><strong>24/7</strong><span style="color:#8e95a5">campagnedata</span></div>
+      <div class="card"><strong>3</strong><span style="color:#8e95a5">grote ad-kanalen</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="prijzen">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Eenvoudige pakketten</h2>
+      <p>Begin klein of laat het volledige advertentieproces uit handen nemen.</p>
+    </div>
+    <div class="pricing">
+      <div class="card price-card">
+        <h3>Starter</h3>
+        <p>Voor kleine bedrijven die willen testen.</p>
+        <div class="price">€299 <span>/ maand</span></div>
+        <ul class="list">
+          <li>1 advertentieplatform</li>
+          <li>Campagne setup</li>
+          <li>Maandelijkse optimalisatie</li>
+          <li>Rapportage</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Kies Starter</a>
+      </div>
+
+      <div class="card price-card featured">
+        <div class="badge">MEEST GEKOZEN</div>
+        <h3>Growth</h3>
+        <p>Voor webshops die serieus willen groeien.</p>
+        <div class="price">€599 <span>/ maand</span></div>
+        <ul class="list">
+          <li>2 advertentieplatforms</li>
+          <li>Wekelijkse optimalisatie</li>
+          <li>Retargeting</li>
+          <li>Creative advies</li>
+          <li>Dashboard & rapportage</li>
+        </ul>
+        <a class="btn" href="#contact">Kies Growth</a>
+      </div>
+
+      <div class="card price-card">
+        <h3>Scale</h3>
+        <p>Volledige performance marketing.</p>
+        <div class="price">Op maat</div>
+        <ul class="list">
+          <li>Google + Meta + TikTok</li>
+          <li>Volledige funnel</li>
+          <li>Advanced scaling</li>
+          <li>Creative strategie</li>
+          <li>Persoonlijke begeleiding</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Plan gesprek</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <div class="eyebrow">Gratis eerste analyse</div>
+        <h2 style="font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.05em;margin:18px 0">
+          Klaar om meer uit je advertenties te halen?
+        </h2>
+        <p style="color:var(--muted)">
+          Vertel kort wat je verkoopt en welk platform je gebruikt. Daarna kan een passende advertentie-aanpak worden bepaald.
+        </p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Bedankt! Dit demoformulier is klaar om aan e-mail of een CRM gekoppeld te worden.');">
+        <input required placeholder="Naam" />
+        <input required type="email" placeholder="E-mailadres" />
+        <input placeholder="Website / webshop" />
+        <select>
+          <option>Ik wil Google Ads</option>
+          <option>Ik wil Meta Ads</option>
+          <option>Ik wil TikTok Ads</option>
+          <option>Ik wil meerdere kanalen</option>
+        </select>
+        <textarea placeholder="Vertel kort wat je wilt bereiken"></textarea>
+        <button class="btn" type="submit">Vraag gratis analyse aan</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footerin">
+    <div>© 2026 Adflow. Alle rechten voorbehouden.</div>
+    <div>Privacy • Voorwaarden • Contact</div>
+  </div>
+</footer>
+
+</body>
+</html>
